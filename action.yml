@@ -1,0 +1,13 @@
+name: "Version action"
+description: "Get the version based on the branch ref"
+inputs:
+  ref: # id of input
+    description: "github ref"
+    required: true
+    default: ${GITHUB_REF}
+outputs:
+  version: # id of output
+    description: "the version code"
+runs:
+  using: "node12"
+  main: "script.release.js"
